@@ -1,0 +1,511 @@
+{
+  "generated_at_utc": "2026-10-27T06:50:44.909513+00:00",
+  "source_url": "https://archive.ics.uci.edu/static/public/352/online%2Bretail.zip",
+  "dataset_url": "https://archive.ics.uci.edu/dataset/352/online+retail",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "archive_sha256": "f5385cbb54bbebf7196389109c6b0621faab0c304e3702548165e71c84aede8b",
+  "file_bytes": 23715344,
+  "sheet": "Online Retail",
+  "rows": 541909,
+  "columns": [
+    "InvoiceNo",
+    "StockCode",
+    "Description",
+    "Quantity",
+    "InvoiceDate",
+    "UnitPrice",
+    "CustomerID",
+    "Country"
+  ],
+  "original_dtypes": {
+    "InvoiceNo": "object",
+    "StockCode": "object",
+    "Description": "object",
+    "Quantity": "int64",
+    "InvoiceDate": "datetime64[us]",
+    "UnitPrice": "float64",
+    "CustomerID": "float64",
+    "Country": "str"
+  },
+  "date_min": "2010-12-01T08:26:00",
+  "date_max": "2011-12-09T12:50:00",
+  "missing": {
+    "InvoiceNo": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "StockCode": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "Description": {
+      "count": 1454,
+      "rate": 0.002683107311375157
+    },
+    "Quantity": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "InvoiceDate": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "UnitPrice": {
+      "count": 0,
+      "rate": 0.0
+    },
+    "CustomerID": {
+      "count": 135080,
+      "rate": 0.249266943342886
+    },
+    "Country": {
+      "count": 0,
+      "rate": 0.0
+    }
+  },
+  "exact_duplicates_extra": 5268,
+  "exact_duplicates_affected_rows": 10147,
+  "duplicate_rate_extra": 0.009721189350979592,
+  "invoice_distinct": 25900,
+  "stock_distinct": 4070,
+  "country_distinct": 38,
+  "customer_distinct_nonnull": 4372,
+  "cancellation_rows": 9288,
+  "negative_quantity_rows": 10624,
+  "negative_quantity_without_c_prefix": 1336,
+  "cancellation_nonnegative_quantity": 0,
+  "zero_quantity_rows": 0,
+  "zero_price_rows": 2515,
+  "negative_price_rows": 2,
+  "max_price_decimal_places": 3,
+  "m01_eligible_rows": 530104,
+  "m01_eligible_missing_customer": 132220,
+  "m01_eligible_missing_description": 0,
+  "m01_gbp": "10666684.544",
+  "m01_duplicate_extra_gbp": "24573.74",
+  "nonstandard_code_rows": 2995,
+  "m01_nonstandard_code_rows": 2379,
+  "m01_nonstandard_code_gbp": "395649.934",
+  "invoice_multiple_countries": 0,
+  "invoice_multiple_customers": 0,
+  "stock_multiple_descriptions": 650,
+  "read_and_profile_seconds": 35.567,
+  "monthly_quality": [
+    {
+      "month": "2010-12",
+      "rows": 42481,
+      "missing_customer": 15631,
+      "date_min": "2010-12-01T08:26:00",
+      "date_max": "2010-12-23T17:41:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-01",
+      "rows": 35147,
+      "missing_customer": 13235,
+      "date_min": "2011-01-04T10:00:00",
+      "date_max": "2011-01-31T16:59:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-02",
+      "rows": 27707,
+      "missing_customer": 7344,
+      "date_min": "2011-02-01T08:23:00",
+      "date_max": "2011-02-28T17:04:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-03",
+      "rows": 36748,
+      "missing_customer": 8926,
+      "date_min": "2011-03-01T08:30:00",
+      "date_max": "2011-03-31T19:55:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-04",
+      "rows": 29916,
+      "missing_customer": 6718,
+      "date_min": "2011-04-01T08:22:00",
+      "date_max": "2011-04-28T19:53:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-05",
+      "rows": 37030,
+      "missing_customer": 8122,
+      "date_min": "2011-05-01T10:51:00",
+      "date_max": "2011-05-31T15:53:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-06",
+      "rows": 36874,
+      "missing_customer": 9038,
+      "date_min": "2011-06-01T07:37:00",
+      "date_max": "2011-06-30T20:08:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-07",
+      "rows": 39518,
+      "missing_customer": 12016,
+      "date_min": "2011-07-01T08:16:00",
+      "date_max": "2011-07-31T16:04:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-08",
+      "rows": 35284,
+      "missing_customer": 7622,
+      "date_min": "2011-08-01T08:30:00",
+      "date_max": "2011-08-31T17:45:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-09",
+      "rows": 50226,
+      "missing_customer": 9404,
+      "date_min": "2011-09-01T08:25:00",
+      "date_max": "2011-09-30T17:22:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-10",
+      "rows": 60742,
+      "missing_customer": 10047,
+      "date_min": "2011-10-02T10:32:00",
+      "date_max": "2011-10-31T17:19:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-11",
+      "rows": 84711,
+      "missing_customer": 19113,
+      "date_min": "2011-11-01T08:16:00",
+      "date_max": "2011-11-30T17:42:00",
+      "calendar_coverage": "within_source_range_not_proof_of_no_gaps"
+    },
+    {
+      "month": "2011-12",
+      "rows": 25525,
+      "missing_customer": 7864,
+      "date_min": "2011-12-01T08:12:00",
+      "date_max": "2011-12-09T12:50:00",
+      "calendar_coverage": "partial_source_end"
+    }
+  ],
+  "nonstandard_codes": [
+    {
+      "stock_code": "AMAZONFEE",
+      "rows": 34,
+      "descriptions": [
+        "AMAZON FEE"
+      ],
+      "m01_gbp": "13761.09"
+    },
+    {
+      "stock_code": "B",
+      "rows": 3,
+      "descriptions": [
+        "Adjust bad debt"
+      ],
+      "m01_gbp": "11062.06"
+    },
+    {
+      "stock_code": "BANK CHARGES",
+      "rows": 37,
+      "descriptions": [
+        "Bank Charges"
+      ],
+      "m01_gbp": "165.001"
+    },
+    {
+      "stock_code": "C2",
+      "rows": 144,
+      "descriptions": [
+        "CARRIAGE"
+      ],
+      "m01_gbp": "7051"
+    },
+    {
+      "stock_code": "CRUK",
+      "rows": 16,
+      "descriptions": [
+        "CRUK Commission"
+      ],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "D",
+      "rows": 77,
+      "descriptions": [
+        "Discount"
+      ],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0003",
+      "rows": 5,
+      "descriptions": [
+        "BOXED GLASS ASHTRAY",
+        "ebay"
+      ],
+      "m01_gbp": "9.94"
+    },
+    {
+      "stock_code": "DCGS0004",
+      "rows": 1,
+      "descriptions": [
+        "HAYNES CAMPER SHOULDER BAG"
+      ],
+      "m01_gbp": "16.63"
+    },
+    {
+      "stock_code": "DCGS0055",
+      "rows": 1,
+      "descriptions": [],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0057",
+      "rows": 1,
+      "descriptions": [],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0066P",
+      "rows": 1,
+      "descriptions": [],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0067",
+      "rows": 1,
+      "descriptions": [
+        "ebay"
+      ],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0068",
+      "rows": 1,
+      "descriptions": [
+        "ebay"
+      ],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0069",
+      "rows": 2,
+      "descriptions": [
+        "OOH LA LA DOGS COLLAR",
+        "ebay"
+      ],
+      "m01_gbp": "15.79"
+    },
+    {
+      "stock_code": "DCGS0070",
+      "rows": 2,
+      "descriptions": [
+        "CAMOUFLAGE DOG COLLAR"
+      ],
+      "m01_gbp": "12.72"
+    },
+    {
+      "stock_code": "DCGS0071",
+      "rows": 1,
+      "descriptions": [],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0072",
+      "rows": 1,
+      "descriptions": [],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0073",
+      "rows": 1,
+      "descriptions": [
+        "ebay"
+      ],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0074",
+      "rows": 1,
+      "descriptions": [],
+      "m01_gbp": "0"
+    },
+    {
+      "stock_code": "DCGS0076",
+      "rows": 2,
+      "descriptions": [
+        "SUNJAR LED NIGHT NIGHT LIGHT"
+      ],
+      "m01_gbp": "48.39"
+    },
+    {
+      "stock_code": "DCGSSBOY",
+      "rows": 11,
+      "descriptions": [
+        "BOYS PARTY BAG"
+      ],
+      "m01_gbp": "150.55"
+    },
+    {
+      "stock_code": "DCGSSGIRL",
+      "rows": 13,
+      "descriptions": [
+        "GIRLS PARTY BAG"
+      ],
+      "m01_gbp": "144.43"
+    },
+    {
+      "stock_code": "DOT",
+      "rows": 710,
+      "descriptions": [
+        "DOTCOM POSTAGE"
+      ],
+      "m01_gbp": "206248.77"
+    },
+    {
+      "stock_code": "M",
+      "rows": 571,
+      "descriptions": [
+        "Manual"
+      ],
+      "m01_gbp": "78110.27"
+    },
+    {
+      "stock_code": "PADS",
+      "rows": 4,
+      "descriptions": [
+        "PADS TO MATCH ALL CUSHIONS"
+      ],
+      "m01_gbp": "0.003"
+    },
+    {
+      "stock_code": "POST",
+      "rows": 1256,
+      "descriptions": [
+        "POSTAGE"
+      ],
+      "m01_gbp": "78101.88"
+    },
+    {
+      "stock_code": "S",
+      "rows": 63,
+      "descriptions": [
+        "SAMPLES"
+      ],
+      "m01_gbp": "63.05"
+    },
+    {
+      "stock_code": "gift_0001_10",
+      "rows": 9,
+      "descriptions": [
+        "Dotcomgiftshop Gift Voucher £10.00"
+      ],
+      "m01_gbp": "74.97"
+    },
+    {
+      "stock_code": "gift_0001_20",
+      "rows": 10,
+      "descriptions": [
+        "Dotcomgiftshop Gift Voucher £20.00",
+        "to push order througha s stock was "
+      ],
+      "m01_gbp": "167.05"
+    },
+    {
+      "stock_code": "gift_0001_30",
+      "rows": 8,
+      "descriptions": [
+        "Dotcomgiftshop Gift Voucher £30.00"
+      ],
+      "m01_gbp": "175.53"
+    },
+    {
+      "stock_code": "gift_0001_40",
+      "rows": 3,
+      "descriptions": [
+        "Dotcomgiftshop Gift Voucher £40.00"
+      ],
+      "m01_gbp": "100.7"
+    },
+    {
+      "stock_code": "gift_0001_50",
+      "rows": 4,
+      "descriptions": [
+        "Dotcomgiftshop Gift Voucher £50.00"
+      ],
+      "m01_gbp": "167.56"
+    },
+    {
+      "stock_code": "m",
+      "rows": 1,
+      "descriptions": [
+        "Manual"
+      ],
+      "m01_gbp": "2.55"
+    }
+  ],
+  "extreme_positive_rows": [
+    {
+      "source_excel_row": 540423,
+      "InvoiceNo": "581483",
+      "StockCode": "23843",
+      "Quantity": 80995,
+      "UnitPrice": "2.08",
+      "amount_gbp": "168469.6",
+      "InvoiceDate": "2011-12-09T09:15:00"
+    },
+    {
+      "source_excel_row": 61621,
+      "InvoiceNo": "541431",
+      "StockCode": "23166",
+      "Quantity": 74215,
+      "UnitPrice": "1.04",
+      "amount_gbp": "77183.6",
+      "InvoiceDate": "2011-01-18T10:01:00"
+    },
+    {
+      "source_excel_row": 222682,
+      "InvoiceNo": "556444",
+      "StockCode": "22502",
+      "Quantity": 60,
+      "UnitPrice": "649.5",
+      "amount_gbp": "38970",
+      "InvoiceDate": "2011-06-10T15:28:00"
+    },
+    {
+      "source_excel_row": 15019,
+      "InvoiceNo": "537632",
+      "StockCode": "AMAZONFEE",
+      "Quantity": 1,
+      "UnitPrice": "13541.33",
+      "amount_gbp": "13541.33",
+      "InvoiceDate": "2010-12-07T15:08:00"
+    },
+    {
+      "source_excel_row": 299984,
+      "InvoiceNo": "A563185",
+      "StockCode": "B",
+      "Quantity": 1,
+      "UnitPrice": "11062.06",
+      "amount_gbp": "11062.06",
+      "InvoiceDate": "2011-08-12T14:50:00"
+    }
+  ],
+  "independent_reconciliation": {
+    "method_1": "Python Decimal over source rows",
+    "method_2": "SQLite integer micro-GBP aggregation",
+    "months_compared": 13,
+    "all_equal": true,
+    "sql_execution_seconds_single_run": 0.4806,
+    "readonly_write_rejected": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "version": "0.2",
+  "status": "implementation_baseline",
+  "dataset_id": "uci_online_retail_352",
+  "source_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "currency": "GBP",
+  "amount_scale": 1000000,
+  "date_column": "InvoiceDate",
+  "interval": "[start,end_exclusive)",
+  "timezone": "unknown_source_wall_time",
+  "duplicates": "retain",
+  "missing_customer_in_amount": "retain",
+  "allowed_dimensions": [
+    "date",
+    "month",
+    "Country",
+    "StockCode"
+  ],
+  "positive_eligibility": {
+    "invoice_not_prefix_case_insensitive": "C",
+    "quantity_gt": 0,
+    "unit_price_gt": 0
+  },
+  "metrics": [
+    {
+      "id": "M01",
+      "name": "正向交易记录金额",
+      "enabled": true,
+      "kind": "sum_amount",
+      "warning": "含费用、手工调整及重复记录；不是支付GMV或纯商品收入"
+    },
+    {
+      "id": "M02",
+      "name": "正向交易发票数",
+      "enabled": true,
+      "kind": "count_distinct",
+      "field": "InvoiceNo",
+      "population": "M01_eligible"
+    },
+    {
+      "id": "M08",
+      "name": "正向交易记录金额月环比",
+      "enabled": true,
+      "kind": "period_ratio",
+      "base_metric": "M01",
+      "full_month_required": true,
+      "zero_denominator": "not_computable",
+      "formula": "(current-previous)/previous"
+    }
+  ],
+  "ambiguous_terms": [
+    "销售额",
+    "业绩",
+    "GMV",
+    "商品销售额"
+  ],
+  "unsupported_without_more_data": [
+    "支付GMV",
+    "利润",
+    "访客转化率",
+    "广告ROI",
+    "已到账退款额",
+    "商品类目"
+  ],
+  "ranking": {
+    "scope": "all_transaction_codes",
+    "sort": "amount_desc_then_StockCode_binary_asc",
+    "product_scope_requires_clarification": true
+  },
+  "country_aliases": {
+    "英国": "United Kingdom",
+    "UK": "United Kingdom"
+  },
+  "no_test_answers_in_resources": true
+}

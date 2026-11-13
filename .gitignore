@@ -1,0 +1,22 @@
+# Future local configuration and runtime data
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+__pycache__/
+data/raw/
+data/runtime/
+logs/
+
+# Downloaded evidence caches; source provenance stays tracked
+evidence/data-profile/*.sqlite
+evidence/data-profile/*.next.sqlite
+
+frontend/dist/
+.pytest_cache/
+
+data/warehouse/
+
+*.sqlite*
+evidence/i*/
